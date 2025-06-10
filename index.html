@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Hunter</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+    <script>
+        // Variabel global
+        var layoutSize = { 'w' : 1024, 'h': 768 };
+        var X_POSITION;
+        var Y_POSITION;
+        var relativeSize;
+    </script>
+
+    <!-- SCRIPT-SCRIPT GAME -->
+    <script src="sceneMenu.js"></script>
+    <script src="scenePlay.js"></script>
+    <script src="sceneGameOver.js"></script>
+
+    <!-- CONFIG PHASER -->
+    <script>
+        const config = {
+            type: Phaser.AUTO,
+            width: 1024,
+            height: 768,
+            scene: [scenePlay], 
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    debug: false
+                }
+            },
+            scale: {
+                autoCenter: Phaser.Scale.CENTER_BOTH,
+            }
+        };
+        var game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
