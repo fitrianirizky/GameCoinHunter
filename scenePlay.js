@@ -155,7 +155,7 @@ var scenePlay = new Phaser.Class({
         //fungsi untuk mendeteksi ketika terjadi tubrukan antara koin dengan karakter
         var colletCoin = function(player, coin){
             //menambahkan nilai sebanyak 10koin baru ke dalam variabel 'countCoin'
-            countCoin += 10;
+            countCoin += 1;
 
             //menampilkan jumlah koin pada teks dengan nama 'coinText'
             coinText.setText(countCoin);
